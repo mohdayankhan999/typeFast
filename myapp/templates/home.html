@@ -1,0 +1,62 @@
+{% load static %}
+<html lang="en">
+<head>
+  <title>Speed Test on TypeFast</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class = "nav-bar">
+    <ul class= 'menu-list'>
+      <a class = 'menu-item-Home' href=""></a>
+      <li class = 'menu-item' >HOME</li>
+      <a class = 'menu-item-Stats' href="">
+        <li class = 'menu-item' >STAT</li>
+      </a>
+    </ul>
+  </div>
+
+  <div class="container-test">
+    <div class="heading">TypeFast</div>
+    <hr>
+    <div class="test_text">Ready to race ?</div>
+    <div class = "input_area_container" >
+      
+      <textarea class="input_area" placeholder="start Typing " oninput="processCurrentText()"
+      onfocus="startTest()"></textarea>
+      <div class="timer">
+        <div class="curr_time">60s</div>
+      </div>
+    </div>
+    
+    <button class="restart_btn" onclick="resetValues()">Restart</button>
+
+    
+  <div class="header">
+    <div class="wpm">
+      <div class="header_text">WPM</div>
+      <div class="curr_wpm">100</div>
+    </div>
+    <div class="cpm">
+      <div class="header_text">CPM</div>
+      <div class="curr_cpm">100</div>
+    </div>
+    <div class="errors">
+      <div class="header_text">Errors</div>
+      <div class="curr_errors">0</div>
+    </div>
+    <div class="accuracy">
+      <div class="header_text">% Accuracy</div>
+      <div class="curr_accuracy">100</div>
+    </div>
+   
+  </div>
+
+  </div>
+
+  
+  <script src="{% static 'speedTest.js' %}"></script>
+</body>
+</html>
